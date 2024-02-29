@@ -1125,7 +1125,7 @@
 	};
 
 	fragment@lcd {
-		target-path = "/";
+		target-path = [2f 00];
 
 		__overlay__ {
 
@@ -4238,7 +4238,7 @@
 			compatible = "samsung,abox-ext-bin";
 			samsung,name = "dummy.bin";
 			samsung,area = <0x01>;
-			samsung,offset = "\0P\b";
+			samsung,offset = <0x500800>;
 			phandle = <0x11f>;
 		};
 
@@ -4638,7 +4638,7 @@
 	};
 
 	chosen {
-		bootargs = "androidboot.hardware=exynos850 console=ram want_initramfs rootwait ro root=/dev/ram0 androidboot.boot_devices=12100000.dwmmc0 init=/init clk_ignore_unused firmware_class.path=/vendor/firmware reserve-fimc=0xffffff90f9fe0000 rcupdate.rcu_expedited=1";
+		bootargs = "androidboot.hardware=exynos850 console=ram skip_initramfs rootwait ro root=/dev/ram0 androidboot.boot_devices=12100000.dwmmc0 init=/init clk_ignore_unused firmware_class.path=/vendor/firmware reserve-fimc=0xffffff90f9fe0000 rcupdate.rcu_expedited=1";
 		linux,initrd-start = <0x84000000>;
 		linux,initrd-end = <0x842fffff>;
 		phandle = <0x12e>;
@@ -5271,7 +5271,7 @@
 		gpu_min_clock = <0x5c0a8>;
 		gpu_dvfs_start_clock = <0x5c0a8>;
 		gpu_dvfs_bl_config_clock = <0x5c0a8>;
-		gpu_default_voltage = "\0\f5";
+		gpu_default_voltage = <0xc3500>;
 		gpu_cold_minimum_vol = <0x00>;
 		gpu_voltage_offset_margin = <0x927c>;
 		gpu_tmu_control = <0x01>;
